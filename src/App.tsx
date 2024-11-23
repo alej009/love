@@ -57,7 +57,7 @@ function App() {
                 <h1 className="romantic-title text-3xl sm:text-4xl md:text-5xl font-bold text-pink-600 mb-4 sm:mb-6">¡Sí! 🎉</h1>
                 <div className="relative overflow-hidden rounded-2xl">
                   <img
-                    src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif"
+                    src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHVnZnNxOTlza285enA4ZWhhazl2OHBuMDhjbnJ2am9zZmsyaWo4dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IzXiddo2twMmdmU8Lv/giphy.webp"
                     alt="Loving cats hugging"
                     className="w-full h-48 sm:h-64 object-cover transform transition-transform duration-500 hover:scale-102 shadow-lg"
                   />
@@ -66,8 +66,9 @@ function App() {
                   </div>
                 </div>
                 <p className="text-lg sm:text-xl text-gray-700 my-4 sm:my-6 leading-relaxed px-2 sm:px-4">
-                  ¡Sabía que dirías que sí! ¡Este será el mejor San Valentín de todos! ❤️
+                  ¡Sabía que dirías que sí! ¡Créeme, el amor que siento por ti es único y no tiene comparación! ❤️
                 </p>
+               
                 <div className="flex justify-center space-x-2 sm:space-x-4">
                   <Heart className="w-12 h-12 sm:w-16 sm:h-16 text-pink-500 animate-pulse" />
                   <Heart className="w-12 h-12 sm:w-16 sm:h-16 text-red-500 animate-bounce" />
@@ -80,11 +81,11 @@ function App() {
               <div className="relative bg-white/80 backdrop-blur rounded-3xl p-4 sm:p-6 md:p-8 card-shadow">
                 <PulsatingHeart />
                 <h1 className="romantic-title text-3xl sm:text-4xl md:text-5xl font-bold text-pink-600 mb-4 sm:mb-6 floating px-2">
-                  ¿Quieres ser mi San Valentín?
+                  ¿Quieres ser mi Novia Sofi?
                 </h1>
                 <div className="relative overflow-hidden rounded-2xl">
                   <img
-                    src="https://media.giphy.com/media/cfuL5gqFDreXxkWQ4o/giphy.gif"
+                    src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmpobTRycDBodXA2dDZqOWdoZjY0bmw0dzNqdXZhYmw4bGllaXd2YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KmxmoHUGPDjfQXqGgv/giphy.webp"
                     alt="Cute cats in love"
                     className="w-full h-48 sm:h-64 object-cover transform transition-transform duration-500 hover:scale-102 shadow-lg"
                   />

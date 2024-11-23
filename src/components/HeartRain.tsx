@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Heart } from 'lucide-react';
+import React, { useEffect, useState } from "react";
+import { Heart } from "lucide-react";
 
 interface HeartProps {
   style: React.CSSProperties;
@@ -7,31 +7,34 @@ interface HeartProps {
 
 const HeartRain: React.FC = () => {
   const [hearts, setHearts] = useState<HeartProps[]>([]);
-  const [interval, setIntervalTime] = useState(300);
+  const [interval, setIntervalTime] = useState(200);
 
   useEffect(() => {
     const updateInterval = () => {
-      setIntervalTime(window.innerWidth < 640 ? 500 : 300);
+      setIntervalTime(window.innerWidth < 640 ? 300 : 200);
     };
 
     updateInterval();
-    window.addEventListener('resize', updateInterval);
-    return () => window.removeEventListener('resize', updateInterval);
+    window.addEventListener("resize", updateInterval);
+    return () => window.removeEventListener("resize", updateInterval);
   }, []);
 
   useEffect(() => {
     const createHeart = () => {
+      const colors = ["#FF4D4D", "#FF69B4", "#FF1493", "#DB7093", "#FF4500"];
       const heart: HeartProps = {
         style: {
           left: `${Math.random() * 100}%`,
           animationDuration: `${Math.random() * 3 + 2}s`,
           opacity: Math.random() * 0.7 + 0.3,
-          transform: `scale(${Math.random() * 0.5 + 0.5})`
-        }
+          transform: `scale(${Math.random() * 2 + 1.5}) rotate(${Math.random() * 360}deg)`,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          animation: 'fall 5s linear infinite',
+        },
       };
-      setHearts(prev => [...prev, heart]);
+      setHearts((prev) => [...prev, heart]);
       setTimeout(() => {
-        setHearts(prev => prev.slice(1));
+        setHearts((prev) => prev.slice(1));
       }, 5000);
     };
 
@@ -44,8 +47,11 @@ const HeartRain: React.FC = () => {
       {hearts.map((heart, index) => (
         <Heart
           key={index}
-          className="absolute text-red-500/40 animate-heart-fall w-4 h-4 sm:w-6 sm:h-6"
-          style={heart.style}
+          className="absolute"
+          style={{
+            ...heart.style,
+            fontSize: "64px",
+          }}
         />
       ))}
     </div>

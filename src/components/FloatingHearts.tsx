@@ -19,18 +19,19 @@ const FloatingHearts: React.FC = () => {
       {[...Array(heartCount)].map((_, i) => (
         <Heart
           key={i}
-          className="absolute text-pink-500/20"
+          className="absolute text-pink-500 animate-pulse"
           style={{
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
-            transform: `scale(${Math.random() * 1.5 + 0.5})`,
-            animation: `floating ${Math.random() * 3 + 2}s ease-in-out infinite`,
-            animationDelay: `${Math.random() * 2}s`,
-            opacity: Math.random() * 0.5 + 0.1
+            transform: `scale(${Math.random() * 10 + 5})`,
+            animation: `floating ${Math.random() * 3 + 2}s ease-in-out infinite, disappear 4s ease-in-out infinite alternate`,
+            opacity: 1,
+            filter: `drop-shadow(0 0 10px rgba(255, 105, 180, 0.8))`,
+            color: `hsl(${Math.random() * 360}, 80%, 60%)`,
           }}
         />
       ))}
-      <div className="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-pink-100/50 to-transparent" />
+      <div className="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-pink-300 to-transparent" />
     </div>
   );
 };

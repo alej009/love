@@ -46,7 +46,7 @@ body {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.3);
+    transform: scale(1.2);
   }
 }
 
@@ -56,8 +56,51 @@ body {
     opacity: 1;
   }
   100% {
-    transform: scale(2);
+    transform: scale(3);
     opacity: 0;
+  }
+}
+
+@keyframes ripple-delayed {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple-far {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -66,16 +109,19 @@ body {
 }
 
 .animate-pulse-heart {
-  animation: pulse-heart 1.5s ease-in-out infinite;
+  animation: pulse-heart 1.5s infinite;
 }
 
 .animate-ripple {
-  animation: ripple 2s linear infinite;
+  animation: ripple 2s infinite ease-out;
 }
 
 .animate-ripple-delayed {
-  animation: ripple 2s linear infinite;
-  animation-delay: 1s;
+  animation: ripple-delayed 2.5s infinite ease-out;
+}
+
+.animate-ripple-far {
+  animation: ripple-far 3s infinite ease-out;
 }
 
 .heart-bg {
